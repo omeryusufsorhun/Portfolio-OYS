@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500;600&display=swap");
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Martian Mono", monospace;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.home-page {
+}
+.navbar {
+  padding: 0;
+  border: 6px black solid;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-4 {
+  border-left: 3px solid black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.track h1 {
+  color: black;
+}
+.text-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-right: 3px black solid;
+}
+
+.text-wrapper-2 {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 3px white solid;
+  overflow: hidden;
+}
+.track-2:hover {
+  animation-play-state: paused;
+}
+
+.words {
+  background-color: black;
+}
+.track h1 {
+  white-space: nowrap;
+  animation: move-rtl 3s linear infinite;
+  color: black;
+  margin: 0px 50px 0px 50px;
+  text-transform: uppercase;
+}
+
+.track-2 h1 {
+  white-space: nowrap;
+  animation: move-rtl 3s linear infinite;
+  color: white;
+  background-color: black;
+  margin: 0px 50px 0px 50px;
+  text-transform: uppercase;
+}
+.track-2 h1:hover > #ab {
+  animation-play-state: paused;
+}
+
+@keyframes move-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.contact a {
+  color: black;
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.contact a:hover {
+  color: white;
+}
+
+.contact .item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.clock {
+  font-family: "Martian Mono", monospace;
+  color: black;
+  font-size: xx-large;
+  border-left: 3px solid black;
+  height: 100%;
+  border-right: 3px solid black;
+}
+
+.sentences {
+  word-wrap: break-word;
+  font-family: "Martian Mono", monospace;
+  color: black;
+  border-bottom: 6px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
+.sentence-1,
+.sentence-2,
+.sentence-3 {
+  border-right: 3px black solid;
+  background-color: white;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  perspective: 1000px;
+  border-right: 3px solid black;
+}
+
+.flip-card-inner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+.pictures {
+  height: 40vh;
+  border-bottom: 6px solid black;
+}
+
+.hero-2 {
+  background-color: white;
+}
+
+.space {
+  height: 37vh;
+  background-color: white;
+}
+.iletisim {
+  height: 100vh;
+  background-color: antiquewhite;
+  margin: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.brutal-btn {
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 0px;
+  box-shadow: 4px 4px #000000;
+  padding: 20px 45px;
+  color: #000000;
+  display: inline-block;
+  font: normal bold 26px/1 "Open Sans", sans-serif;
+  text-align: center;
+  width: 50%;
+}
+.brutal-btn:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: -1;
+}
+.brutal-btn:hover,
+brutalist-btn:active {
+  color: white;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+.brutal-btn:hover:after,
+brutalist-btn:hover:active {
+  background-color: white;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+.submit-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+button:disabled {
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+.submit-btn button {
+  width: 25%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vh;
+  color: black;
+}
+input {
+  width: 75%;
+  outline-style: none;
+  font-weight: bold;
+  border: 3px black solid;
+}
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+}
+textarea {
+  min-height: 50%;
+  max-height: 50%;
+  width: 75%;
+  outline-style: none;
+  font-weight: bold;
+  resize: none;
+  border: 3px black solid;
+}
+input.description {
+  height: 50%;
+}
+.hakkinda {
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  padding-top: 7vh !important;
+}
+.egitim {
+  height: 10vh;
+  border: 3px white solid;
+  margin-top: 10vh;
+  margin-bottom: 1px !important;
+}
+
+.hobbies {
+  height: 10vh;
+  border: 3px white solid;
+  border-bottom: 3px white solid !important;
+}
+.yetenekler {
+  height: 100vh;
+  background-color: white;
+  padding-top: 7vh !important;
+}
+.experiences a {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+.experiences a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease;
+}
+.mail-link {
+  text-decoration: none;
+  color: white;
+}
+.mail-link:hover {
+  color: black;
+  background-color: white;
+  transition: 0.3s ease;
+}
